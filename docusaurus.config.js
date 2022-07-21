@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Kryptic Wallet API Documentation",
   tagline: "Build Web3 Dapps that interact with a secure and modular wallet.",
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://docs.kryptic.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -36,7 +36,6 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/Ronin-Ventures/Kryptic-Wallet-Docs",
         },
         blog: {
           showReadingTime: true,
@@ -55,6 +54,10 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: "dark",
+        disableSwitch: true,
+      },
       navbar: {
         logo: {
           alt: "My Site Logo",
@@ -67,58 +70,33 @@ const config = {
             position: "left",
             label: "Docs",
           },
-          { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/Ronin-Ventures/Kryptic-Wallet-Docs",
-            label: "GitHub",
+            type: "doc",
+            docId: "Developers/API/API",
+            position: "left",
+            label: "API",
+          },
+          {
+            type: "html",
             position: "right",
+            value:
+              '<a href="https://github.com/Ronin-Ventures/Kryptic-Wallet-Docs"><img src="/img/github.svg"></a>',
           },
         ],
       },
       footer: {
+        logo: {
+          alt: "My Site Logo",
+          src: "/img/logo.svg",
+        },
         style: "dark",
-        links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/docs/intro",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Discord",
-                href: "https://discord.gg/wJ3ZWbfugG",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
-              },
-            ],
-          },
-        ],
+        links: [],
         copyright: `Copyright © ${new Date().getFullYear()} Ronin Ventures`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        defaultLanguage: "javascript",
       },
     }),
 };
