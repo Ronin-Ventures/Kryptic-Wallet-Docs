@@ -96,7 +96,7 @@ const config = {
             label: "Docs",
           },
           {
-            to: "Docs/Developers/API/API",
+            to: "Docs/Developers/API/",
             label: "API",
           },
         ],
