@@ -22,6 +22,32 @@ function HomepageHeader() {
             Get Started
           </Link>
         </div>
+        <div className="hero__cards__container">
+          <div className="hero__card">
+            <h2> Easy To Use</h2>
+            <p>
+              Kryptic Wallet was designed from the bottom up to be simple to
+              use, whether you're a user looking to send, receive, and stake
+              tokens or a developer looking to integrate a wallet to a Dapp.
+            </p>
+          </div>
+          <div className="hero__card">
+            <h2> User First</h2>
+            <p>
+              Even without having to worry about integrating a wallet, creating
+              a Dapp is challenging. We've simplified integration so you can
+              focus on what's important.
+            </p>
+          </div>
+          <div className="hero__card">
+            <h2> Focus on What Matters</h2>
+            <p>
+              Even without having to worry about integrating a wallet, creating
+              a Dapp is challenging. We've simplified integration so you can
+              focus on what's important.
+            </p>
+          </div>
+        </div>
       </div>
     </header>
   );
@@ -30,10 +56,7 @@ function HomepageHeader() {
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
+    <Layout title={`${siteConfig.title}`} description={`${siteConfig.tagline}`}>
       <HomepageHeader />
     </Layout>
   );

@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Kryptic Wallet API Documentation",
+  title: "Kryptic Wallet Documentation",
   tagline: "Build Web3 Dapps that interact with a secure and modular wallet.",
   url: "https://docs.kryptic.io",
   baseUrl: "/",
@@ -90,7 +90,16 @@ const config = {
           src: "/img/logo.svg",
         },
         style: "dark",
-        links: [],
+        links: [
+          {
+            to: "Docs/Intro",
+            label: "Docs",
+          },
+          {
+            to: "Docs/Developers/API/API",
+            label: "API",
+          },
+        ],
         copyright: `Copyright © ${new Date().getFullYear()} Ronin Ventures`,
       },
       prism: {
