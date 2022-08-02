@@ -21,14 +21,14 @@ Returns the wallet balance.
 const balance  = await window.kryptic.getWalletBalance();
 ```
 
-### Get Wallet Viewing keys
+### Get Wallet Viewing key
 ```javascript
-getWalletViewingKeys(): Promise<Token[]>;
+getWalletViewingKey(contractAddress: string): Promise<Token>;
 ```
-Returns an array with all tracked tokens, each one with a `key` property.
+Returns an object with information about the token, with a `key` property.
 
 ```javascript
-const viewingKeys  = await window.kryptic.getWalletViewingKeys();
+const viewingKey  = await window.kryptic.getWalletViewingKey('secret18vd8fpwxzck93qlwghaj6arh4p7c5n8978vsyg');
 ```
 
 ### Suggest token
